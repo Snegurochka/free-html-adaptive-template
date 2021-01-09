@@ -1,0 +1,140 @@
+.top-slider {
+    font-family: $special-font;
+}
+
+.top-slider__wrapper {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 4px 24px 24px;
+}
+
+.top-slider__title {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: normal;
+    margin: 22px 0;
+}
+
+.top-slider__text {
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.top-slider__img {
+    padding-top: 18px;
+}
+
+.top-slider__button {
+    font-family: $special-font;
+    line-height: 1;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $basic-white;
+    background: $basic-purple;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $basic-purple;
+    }
+}
+
+@media (max-width: $only-mobile-width) {
+    .top-slider {
+        color: $basic-white;
+        text-align: center;
+    
+        background: linear-gradient(to bottom, $basic-purple, $basic-purple 60%, $basic-white 50%, $basic-white 100%);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% auto;
+
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .top-slider {
+        position: relative;
+        text-align: left;
+        padding: 8px 0;
+        color: $basic-black;
+        height: 412px;
+    }
+
+    .top-slider__wrapper {
+        max-width: 760px;
+    }
+
+    .top-slider__title {
+        font-size: 58px;
+        margin: 36px 0;
+        z-index: 2;
+        position: relative;
+    }
+
+    .top-slider__text {
+        font-size: 18px;
+    }
+
+    .top-slider__img {
+        position: absolute;
+        left: 46%;
+        max-width: 400px;
+        top: 9px;
+    }
+
+    .top-slider__button {
+        position: absolute;
+        top: 272px;
+        font-size: 20px;
+        width: 246px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .top-slider {
+        height: 590px;  
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+      
+            width: 50%;
+            height: 723px;
+
+            background-color: $basic-purple;
+        }
+    }
+
+    .top-slider__wrapper {
+        max-width: 1062px;  
+    }
+
+    .top-slider__title {
+        padding-top: 50px;
+        max-width: 44%;
+        margin-bottom: 42px;
+    }
+
+    .top-slider__text {
+        display: block;
+        margin-bottom: 48px;
+    }
+    .top-slider__img {
+        max-width: 660px;
+        left: calc(50% - 322px);
+        top: -45px;
+    }
+
+    .top-slider__button {
+        position: static;
+        font-size: 18px;
+        padding: 16px 27px;
+    }
+}

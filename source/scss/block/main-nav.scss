@@ -1,0 +1,111 @@
+.main-nav__togle {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: $basic-white;
+
+    &:hover, &:active{
+        background-color: $basic-purple;
+    }
+}
+
+.main-nav__wrapper {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.main-nav__list {
+    @include reset-list;
+    border-bottom: 1px solid $special-light-gray;
+}
+
+.main-nav__item {
+    padding-top: 32px;
+    margin-left: 35px;
+}
+
+.main-nav__item a {
+    font-family: $special-font;
+    color: $basic-black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-bottom: 8px;
+
+    &[href]:hover {
+        color: rgba($basic-black, 0.6);
+    }
+}
+
+@media (max-width: $only-mobile-width) {
+    .main-nav--closed .main-nav__togle::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 17px;
+        width: 36px;
+        height: 2px;
+        background-color: $special-dark-gray;
+        box-shadow: 0 8px 0 0 $special-dark-gray, 0 16px 0 0 $special-dark-gray;
+    }
+    
+    .main-nav--closed .main-nav__wrapper{
+        display: none;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .main-nav {
+        grid-column: 3 / 4;
+        margin-right: 14px;
+    }
+
+    .main-nav__togle {
+        display: none;
+    }
+
+    .main-nav__list {
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: none;
+    }
+
+    .main-nav__wrapper {
+        width: 100%;
+    }
+
+    .main-nav__item {
+        padding-top: 0px;
+    }
+
+    .main-nav__item--active a{
+        border-bottom: 2px solid $basic-purple;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .main-nav {
+        padding-top: 36px;
+        margin-right: 0;
+        z-index: 2;
+    }
+
+    .main-nav__item a{
+        color: $basic-white;
+        font-size: 20px;
+
+        &[href]:hover {
+            color: rgba($basic-white, 0.6);
+        }
+    }
+
+    .main-nav__item--active a{
+        border-bottom-color: inherit;
+    }
+}

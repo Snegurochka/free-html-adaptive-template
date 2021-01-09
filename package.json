@@ -1,0 +1,30 @@
+{
+  "name": "html2.kurs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.2.1",
+    "postcss-csso": "^5.0.0"
+  },
+  "scripts": {
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
